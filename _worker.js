@@ -113,31 +113,35 @@ export default {
 
 async function nginx() {
 	const text = `
-	<!DOCTYPE html>
-	<html>
-	<head>
-	<title>Welcome to nginx!</title>
-	<style>
-		body {
-			width: 35em;
-			margin: 0 auto;
-			font-family: Tahoma, Verdana, Arial, sans-serif;
-		}
-	</style>
-	</head>
-	<body>
-	<h1>Welcome to nginx!</h1>
-	<p>If you see this page, the nginx web server is successfully installed and
-	working. Further configuration is required.</p>
-	
-	<p>For online documentation and support please refer to
-	<a href="http://nginx.org/">nginx.org</a>.<br/>
-	Commercial support is available at
-	<a href="http://nginx.com/">nginx.com</a>.</p>
-	
-	<p><em>Thank you for using nginx.</em></p>
-	</body>
-	</html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎使用 nginx</title>
+    <style>
+        body {
+            max-width: 40em;
+            margin: 4em auto;
+            padding: 0 1em;
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 { font-size: 1.8em; margin-bottom: .5em; }
+        p { margin: .8em 0; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        em { font-style: italic; color: #555; }
+    </style>
+</head>
+<body>
+    <h1>欢迎使用 nginx！</h1>
+    <p>如果您看到此页面，说明 nginx 服务器已成功安装并正常运行。后续仍需进一步配置。</p>
+    <p>在线文档与支持请访问 <a href="http://nginx.org/" rel="noopener">nginx.org</a>。<br>商业支持请访问 <a href="http://nginx.com/" rel="noopener">nginx.com</a>。</p>
+    <p><em>感谢您使用 nginx。</em></p>
+</body>
+</html>
 	`
 	return text;
 }
